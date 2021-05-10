@@ -1,6 +1,8 @@
 import {useEffect, useState} from 'react';
 import User from "../user/User";
 import './Users.css';
+import axiosInstance from '../../services/api';
+
 
 //                                    Т Е О Р І Я  'STATE LIFTING'
 //                                (стан прокидується на рівень вище)
@@ -96,11 +98,7 @@ function Users(input, init) {
     let [singleUser, setSingleUser] = useState(null);
 
     useEffect(() => {
-        fetch('http://jsonplaceholder.typicode.com/users')
-            .then(value => value.json())
-            .then(value => {
-                setUsers([...value]);
-            });
+   axiosInstance.get('/users').then(value => setUsers([...value.data]));
     }, []);
 
 
