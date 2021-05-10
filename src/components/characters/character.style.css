@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+}
+
+div {
+    width: 400px;
+    background: #c7e7e7;
+    margin-bottom: 10px;
+}
+
+img {
+    width:  100%;
+}
+
+p {
+    width: 100%;
+    text-align: justify;
+}
+
+.Cruise-class {
+    width: 500px;
+    margin: 20px;
+
+
+}
+
+.Statham-class {
+    width: 500px;
+    margin: 20px;
+}
+
+
