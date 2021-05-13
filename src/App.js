@@ -26,10 +26,20 @@ function App() {
 
     let [counter, setCounter] = useState(0);
     const increment = () => {
-        counter++;
-        setCounter(counter);
+        setCounter(++counter);
         console.log(counter);
     };
+
+    const decrement = () => {
+        counter--;
+        setCounter(counter);
+        console.log(counter);
+    }
+
+    const reset = () => {
+        setCounter(0);
+        console.log(counter);
+    }
 
 
     return (
@@ -38,7 +48,8 @@ function App() {
             <div>
                 counter is {counter}
                 <button onClick={increment}>increment</button>
-
+                <button onClick={decrement}>decrement</button>
+                <button onClick={reset}>reset</button>
             </div>
 
 
@@ -56,7 +67,6 @@ function App() {
             }
 
             <button onClick={deleteCar}>delete car</button>
-
 
         </div>
     );
