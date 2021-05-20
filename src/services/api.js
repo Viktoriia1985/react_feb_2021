@@ -5,6 +5,3 @@ export default axios.create({
 
 });
 
-
-
-
